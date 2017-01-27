@@ -1,0 +1,18 @@
+body {
+    font-size: 13px;
+    font-family: 'PT Sans';
+    color: black;
+    line-height: 18px;
+}
+
+h1 {
+    font-family: 'Cuprum';
+    font-size: 40px;
+    line-height: 48px;
+}
+
+h2 {
+    font-family: 'Cuprum';
+    font-size: 30px;
+    line-height: 36px;
+}
