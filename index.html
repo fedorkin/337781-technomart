@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Техномарт</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -11,10 +12,9 @@
   <header class="main-header">
     <div class="top-header">
       <div class="top-header-layout container">
-        <a href="#" class="btn logo">Техномарт</a>
+        <a href="#" class="btn btn-logo">Техномарт</a>
         <form class="search-form" action="#" method="GET" name="search">
-          <label class="search-form__label-input">Поиск:<input class="search-form__input" type="text" name="search-text"></label>
-          <input class="search-form__submit" type="submit" value="Найти">
+          <input class="search-form__input" type="text" name="search-text" placeholder="Поиск:">
         </form>
         <div class="order-block">
           <a class="order-block__bookmark" href="#">Закладки</a>
@@ -34,8 +34,8 @@
             <address class="contact-information__address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
           <div class="user-block">
-            <a class="btn signin-btn" href="#">Войти</a>
-            <a class="btn signup-btn" href="#">Регистрация</a>
+            <a class="signin-btn" href="#">Войти</a>
+            <a class="signup-btn" href="#">Регистрация</a>
           </div>
         </div>
       </div>
@@ -57,15 +57,21 @@
     <div class="product-group clearfix container">
       <div class="product-group__item product-group__item-material">
         <b>Материал</b>
-        <a class="btn" href="#">На любой вкус</a>
+        <div class="product-group__item-button">
+          <a class="product-group__item-button-text" href="#">На любой вкус</a>
+        </div>
       </div>
       <div class="product-group__item product-group__item-tool">
         <b>Инструмент</b>
-        <a class="btn" href="#">На все случаи</a>
+        <div class="product-group__item-button">
+          <a class="product-group__item-button-text" href="#">На все случаи</a>
+        </div>
       </div>
       <div class="product-group__item product-group__item-technique">
         <b>Техника</b>
-        <a class="btn" href="#">Для стройки</a>
+        <div class="product-group__item-button">
+          <a class="product-group__item-button-text" href="#">Для стройки</a>
+        </div>
       </div>
       <div class="gallery">
         <figure class="gallery__content">
@@ -79,11 +85,15 @@
       </div>
       <div class="product-group__item product-group__item-sales">
         <b>Скикди 50%</b>
-        <a class="btn" href="#">на 350 товаров</a>
+        <div class="product-group__item-button">
+          <a class="product-group__item-button-text" href="#">на 350 товаров</a>
+        </div>
       </div>
       <div class="product-group__item product-group__item-delivery">
         <b>Доставка</b>
-        <a class="btn" href="#">Бесплатно</a>
+        <div class="product-group__item-button">
+          <a class="product-group__item-button-text" href="#">Бесплатно</a>
+        </div>
       </div>
     </div>
 
@@ -118,6 +128,7 @@
           <img src="img/photo-product-item-bfg2000.jpg" width="220" height="158" alt="Перфоратор Bosch BFG 2000">
           <h2 class="product-item__name">Перфоратор Bosch</h2>
           <span class="product-item__model">BFG 2000</span>
+          <span class="product-item__prepare-price"></span>
           <a href="#" class="product-item__price">12500 Р.</a>
         </article>
       </div>
@@ -129,30 +140,14 @@
         <a class="popular-vendors__header-btn btn popular-header-btn" href="#">Все производители</a>
       </header>
       <div class="popual-vendors__items">
-        <div class="vendor-item">
-          <a href="#">Bosch</a>
-        </div>
-        <div class="vendor-item">
-          <a href="#">Makita</a>
-        </div>
-        <div class="vendor-item">
-          <a href="#">DeWalt</a>
-        </div>
-        <div class="vendor-item">
-          <a href="#">Интерскол</a>
-        </div>
-        <div class="vendor-item">
-          <a href="#">Hitachi</a>
-        </div>
-        <div class="vendor-item">
-          <a href="#">LG</a>
-        </div>
-        <div class="vendor-item">
-          <a href="#">AEG</a>
-        </div>
-        <div class="vendor-item">
-          <a href="#">Metabo</a>
-        </div>
+        <a class="vendor-item" href="#"><img src="img/logo-vendor-bosch.jpg" width="126" height="37" alt="Bosch"></a>
+        <a class="vendor-item" href="#"><img src="img/logo-vendor-makita.jpg" width="123" height="40" alt="Makita"></a>
+        <a class="vendor-item" href="#"><img src="img/logo-vendor-DeWALT.jpg" width="146" height="44" alt="DeWalt"></a>
+        <a class="vendor-item" href="#"><img src="img/logo-vendor-interskol.jpg" width="184" height="40" alt="Интерскол"></a>
+        <a class="vendor-item" href="#"><img src="img/logo-vendor-Hitachi.jpg" width="169" height="31" alt="Hitachi"></a>
+        <a class="vendor-item" href="#"><img src="img/logo-vendor-LG.jpg" width="121" height="73" alt="LG"></a>
+        <a class="vendor-item" href="#"><img src="img/logo-vendor-AEG.jpg" width="151" height="96" alt="AEG"></a>
+        <a class="vendor-item" href="#"><img src="img/logo-vendor-Metabo.jpg" width="204" height="69" alt="Metabo"></a>
       </div>
     </section>
 
@@ -169,16 +164,16 @@
             <label>Гарантия<input type="radio" class="service-block__item" name="service-type"></label>
             <label>Кредит<input type="radio" class="service-block__item" name="service-type"></label>
           </fieldset>
-          <div class="service-block__guarantee">
-            <dl class="service-block__guarantee-text">
-              <dt class="service-block__guarantee-title">Доставка</dt>
-              <dd class="service-block__guarantee-description">
+          <div class="service-block__delivery">
+            <dl class="service-block__delivery-text">
+              <dt class="service-block__delivery-title">Доставка</dt>
+              <dd class="service-block__delivery-description">
                 Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!<br>Ведь мы не плохо
-                заработаем,<br>поднимая его на ваш этаж!
+                заработаем,
+                <br>поднимая его на ваш этаж!
               </dd>
             </dl>
-            <div class="service-block_guarantee-log">
-            </div>
+            <img class="service-block__delivery-log" src="img/delivery-truck.jpg" widht="444" height="255" alt="Доставка">
           </div>
         </div>
       </section>
@@ -216,7 +211,7 @@
   <footer class="additional-footer">
     <div class="additional-footer-layout container">
       <div class="additional-footer_top-menu">
-        <a href="#" class="btn logo">Техномарт</a>
+        <a href="#" class="btn btn-logo">Техномарт</a>
         <nav class="second-navigation">
           <ul class="second-navigation-layout">
             <li class="second-navigation__item"><a href="#">Компания</a></li>
