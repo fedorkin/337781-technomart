@@ -12,7 +12,7 @@
   <header class="main-header">
     <div class="top-header">
       <div class="top-header-layout container">
-        <a href="#" class="btn btn-logo">Техномарт</a>
+        <a class="btn btn-logo">Техномарт</a>
         <form class="search-form" action="#" method="GET" name="search">
           <input class="search-form__input" type="text" name="search-text" placeholder="Поиск:">
         </form>
@@ -41,9 +41,9 @@
       </div>
       <nav class="main-navigation container">
         <ul class="main-navigation-layout">
-          <li class="main-navigation__item"><a href="#">Главная</a></li>
+          <li class="main-navigation__item"><a>Главная</a></li>
           <li class="main-navigation__item"><a href="#">Компания</a></li>
-          <li class="main-navigation__item"><a href="#">Каталог</a></li>
+          <li class="main-navigation__item"><a href="catalog.html">Каталог</a></li>
           <li class="main-navigation__item"><a href="#">Новости</a></li>
           <li class="main-navigation__item"><a href="#">Спецпредложения</a></li>
           <li class="main-navigation__item"><a href="#">Доставка</a></li>
@@ -104,32 +104,49 @@
       </header>
       <div class="popular-products__items">
         <article class="product-item">
+          <div class="product-item__actions">
+            <a href="#" class="product-item__buy">Купить</a>
+            <a href="#" class="product-item__bookmark">В закладки</a>
+          </div>
           <img src="img/photo-product-item-bfg9000.jpg" width="220" height="158" alt="Перфоратор Bosh BFG 9000">
           <h2 class="product-item__name">Перфоратор BOSH</h2>
           <span class="product-item__model">BFG 9000</span>
           <span class="product-item__prepare-price">32500 Р.</span>
-          <a href="#" class="product-item__price">25500 Р.</a>
+          <span class="product-item__price">25500 Р.</span>
         </article>
         <article class="product-item">
+          <div class="product-item__actions">
+            <a href="#" class="product-item__buy">Купить</a>
+            <a href="#" class="product-item__bookmark">В закладки</a>
+          </div>
           <img src="img/photo-product-item-bfg3000.jpg" width="220" height="158" alt="Перфоратор Bosch BFG 3000">
           <h2 class="product-item__name">Перфоратор Bosch</h2>
           <span class="product-item__model">BFG 3000</span>
           <span class="product-item__prepare-price">22500 Р.</span>
-          <a href="#" class="product-item__price">15500 Р.</a>
+          <span class="product-item__price">15500 Р.</span>
         </article>
         <article class="product-item">
+          <div class="product-item__actions">
+            <a href="#" class="product-item__buy">Купить</a>
+            <a href="#" class="product-item__bookmark">В закладки</a>
+          </div>
           <img src="img/photo-product-item-bfg6000.jpg" width="220" height="158" alt="Перфоратор Bosch BFG 6000">
           <h2 class="product-item__name">Перфоратор Bosch</h2>
           <span class="product-item__model">BFG 6000</span>
           <span class="product-item__prepare-price">30500 Р.</span>
-          <a href="#" class="product-item__price">25500 Р.</a>
+          <span class="product-item__price">25500 Р.</span>
         </article>
         <article class="product-item">
+          <span class="flag flag-new">новинка</span>
+          <div class="product-item__actions">
+            <a href="#" class="product-item__buy">Купить</a>
+            <a href="#" class="product-item__bookmark">В закладки</a>
+          </div>
           <img src="img/photo-product-item-bfg2000.jpg" width="220" height="158" alt="Перфоратор Bosch BFG 2000">
           <h2 class="product-item__name">Перфоратор Bosch</h2>
           <span class="product-item__model">BFG 2000</span>
           <span class="product-item__prepare-price"></span>
-          <a href="#" class="product-item__price">12500 Р.</a>
+          <span class="product-item__price">12500 Р.</span>
         </article>
       </div>
     </section>
@@ -173,7 +190,7 @@
                 <br>поднимая его на ваш этаж!
               </dd>
             </dl>
-            <img class="service-block__delivery-log" src="img/delivery-truck.jpg" widht="444" height="255" alt="Доставка">
+            <img class="service-block__delivery-log" src="img/delivery-truck.jpg" width="444" height="255" alt="Доставка">
           </div>
         </div>
       </section>
@@ -189,20 +206,19 @@
         <p>
           Мы может доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:
         </p>
-        <ul>
+        <ul class="index-content__transport-company">
           <li>Деловые линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="#" class="btn">Подробнее о компании</a>
+        <a href="#" class="about-company-btn btn">Подробнее о компании</a>
       </section>
       <section class="index-content__contacts">
         <h2 class="index-content__contacts-title">Контакты</h2>
         <p>
-          Вы можете забрать товар сами,<br> заехав в наш офис.
+          Вы можете забрать товар сами,<br> заехав в наш офис:
         </p>
-        <div class="contacts__our-location">
-        </div>
+        <img class="contacts__our-location" src="img/map.jpg" width="300" height="158" alt="г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" >
         <a href="#" class="contacts__btn btn">Заблудились? Напишите нам!</a>
       </section>
     </div>
@@ -224,8 +240,8 @@
       </div>
       <div class="additional-footer__bottom-menu">
         <div class="contact-information">
-          <a class="contact-information__telephone" href="tel:+78125550555">+7(812)555-05-55</a>
           <address class="contact-information__address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a class="contact-information__telephone" href="tel:+78125550555">+7(812)555-05-55</a>          
         </div>
         <div class="product-group-list">
           <ul class="product-group-list-layout">
@@ -247,18 +263,19 @@
         </p>
       </section>
       <section class="footer-social">
-        <p>Давайте дружить!</p>
-        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+        <ul class="footer-social-layout">
+          <li class="footer-social__item"><a class="social-btn social-btn-vk" href="#">Вконтакте</a></li>
+          <li class="footer-social__item"><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
+          <li class="footer-social__item"><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
+        </ul>
       </section>
       <section class="footer-feedback">
         <p>Обратная связь:</p>
         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </section>
       <section class="footer-copyright">
-        <p>Разработано -</p>
-        <a class="btn" href="https://htmlacademy.ru">htmlacademy.ru</a>
+        <p>Разработано —</p>
+        <a href="https://htmlacademy.ru">htmlacademy.ru</a>
       </section>
     </div>
   </footer>
