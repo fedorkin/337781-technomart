@@ -17,8 +17,8 @@
           <input class="search-form__input" type="text" name="search-text" placeholder="Поиск:">
         </form>
         <div class="order-block">
-          <a class="order-block__bookmark" href="#">Закладки</a>
-          <a class="order-block__cart" href="#">Корзина</a>
+          <a class="order-block__bookmark" href="#">Закладки: 0</a>
+          <a class="order-block__cart not-empty" href="#">Корзина: 10</a>
           <a class="order-block__checkout" href="#">Оформить заказ</a>
         </div>
       </div>
@@ -99,11 +99,11 @@
             <label for="vender-2">Интерскол</label>
           </p>
           <p>
-            <input type="checkbox" name="vender" value="3"  id="vender-3" checked>
+            <input type="checkbox" name="vender" value="3" id="vender-3" checked>
             <label for="vender-3">Makita</label>
           </p>
           <p>
-            <input type="checkbox" name="vender" value="4"  id="vender-4" disabled>
+            <input type="checkbox" name="vender" value="4" id="vender-4" disabled>
             <label for="vender-4">DeWalt</label>
           </p>
           <p>
@@ -125,16 +125,33 @@
         <input type="submit" value="Показать">
       </form>
       <section class="product-items">
-        <form class="product-items__sorting-form" action="#" name="sorting" method="get">
-          <b>Сортировка:</b>
-          <label>По цене<input type="radio" name="sorting-kind" value="1" checked></label>
-          <label>По типу<input type="radio" name="sorting-kind" value="2"></label>
-          <label>По функциональности<input type="radio" name="sorting-kind" value="2"></label>
+        <form class="product-items__sorting-form clearfix" action="#" name="sorting" method="get">
+          <b class="sorting-form__tittle">Сортировка:</b>
+          <fieldset class="sorting-form__kind">
+            <span>
+              <input type="radio" name="sorting-kind" value="1" id="sorting-kind__price" checked>
+              <label for="sorting-kind__price">По цене</label>
+            </span>
+            <span>
+              <input type="radio" name="sorting-kind" value="2" id="sorting-kind__type">
+              <label for="sorting-kind__type">По типу</label>
+            </span>
+            <span>
+              <input type="radio" name="sorting-kind" value="3" id="sorting-kind__functionality">
+              <label for="sorting-kind__functionality">По функционалу</label>
+            </span>
+          </fieldset>
 
-          <label>По убыванию<input type="radio" name="sorting-type" value="desc" checked></label>
-          <label>По возрастанию<input type="radio" name="soring-type" value="asc"></label>
-
-          <input type="submit" value="Сортировать">
+          <fieldset class="sorting-form__order">
+            <span>
+              <input type="radio" name="sorting-type" value="desc" id="sorting-type__desc" checked>
+              <label class="sorting-form__order-desc" for="sorting-type__desc">По убыванию</label>
+            </span>
+            <span>
+              <input type="radio" name="sorting-type" value="asc" id="sorting-type__asc">
+              <label class="sorting-form__order-asc" for="sorting-type__asc">По возрастанию</label>
+            </span>
+          </fieldset>
         </form>
         <div class="product-items__content">
           <article class="product-item">
@@ -240,7 +257,7 @@
         </div>
         <nav class="products-item__navigation">
           <ul class="products-item__navigation-layout">
-            <li class="products-item__navigation-item"><a href="#">1</a></li>
+            <li class="products-item__navigation-item active"><a>1</a></li>
             <li class="products-item__navigation-item"><a href="#">2</a></li>
             <li class="products-item__navigation-item"><a href="#">3</a></li>
             <li class="products-item__navigation-item"><a href="#">Следующая</a></li>
@@ -254,10 +271,11 @@
     <dl class="category__description container">
       <dt>Пара слов о перфораторах</dt>
       <dd>
-        Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и
-        камне. Существуют электро механические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
-        шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены
-        отбойный молоток и ударная дрель.
+        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и
+        камне.</br>
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта
+        и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный
+        молоток и ударная дрель.
       </dd>
     </dl>
   </div>
@@ -265,7 +283,7 @@
   <footer class="additional-footer">
     <div class="additional-footer-layout container">
       <div class="additional-footer_top-menu">
-        <a href="#" class="btn btn-logo">Техномарт</a>
+        <a href="index.html" class="btn btn-logo">Техномарт</a>
         <nav class="second-navigation">
           <ul class="second-navigation-layout">
             <li class="second-navigation__item"><a href="#">Компания</a></li>
@@ -279,7 +297,7 @@
       <div class="additional-footer__bottom-menu">
         <div class="contact-information">
           <address class="contact-information__address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-          <a class="contact-information__telephone" href="tel:+78125550555">+7(812)555-05-55</a>          
+          <a class="contact-information__telephone" href="tel:+78125550555">+7(812)555-05-55</a>
         </div>
         <div class="product-group-list">
           <ul class="product-group-list-layout">
@@ -317,6 +335,16 @@
       </section>
     </div>
   </footer>
+
+  <div class='modal_overlay'></div>
+  <div class="modal-added-product">
+    <button class="model-added-product__close" type="button" title="Закрыть">Закрыть</button>
+    <p class="model-added-product__message">Товар добавлен в корзирну!</p>
+    <div class="model-added-product__action-layout">
+      <a class="model-added-product__order btn" href "#">Оформить заказ</a>
+      <button class="model-added-product__continue btn" type="button" title="Продолжить покупки">Продолжить покупки</button>
+    </div>
+  </div>
 </body>
 
 </html>
