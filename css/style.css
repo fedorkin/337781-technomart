@@ -122,13 +122,16 @@ img {
 .btn-logo {
     position: relative;
 
+    margin-right: 0;
+    padding: 9px 55px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+
     font-size: 24px;
     line-height: 24px; 
     font-weight: 400;
     text-align: center;
     color: white;
-    padding: 9px 55px;
-    margin-right: 0;
 }
 
 .btn-logo::after {
@@ -163,7 +166,7 @@ img {
     position: absolute;
 
     top: 12px;
-    left: 12px;
+    left: 16px;
 
     width: 17px;
     height: 17px;
@@ -187,7 +190,7 @@ img {
 .search-form__input {
     position: relative;
     padding: 12px 10px;
-    padding-left: 50px;
+    padding-left: 49px;
 
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: 400;
@@ -239,9 +242,13 @@ img {
     color:white;
 }
 
-.order-block__cart,
 .order-block__bookmark {
     padding-left: 45px;
+    text-align: left;    
+}
+
+.order-block__cart {
+    padding-left: 49px;
     text-align: left;    
 }
 
@@ -264,7 +271,7 @@ img {
     content: "";
     position: absolute;
     top: 12px;
-    left: 20px;
+    left: 16px;
 
     width: 17px;
     height: 16px;
@@ -279,7 +286,7 @@ img {
     content: "";
     position: absolute;
     top: 12px;
-    left: 20px;
+    left: 18px;
 
     width: 14px;
     height: 16px;
@@ -338,15 +345,19 @@ img {
 
 .mart-description {
     margin: 0px;
-    padding: 0 45px;
+    padding: 3px 51px;
+    vertical-align: top;
 
     flex-basis: 300px;
+
+    font-family: "Cuprum", sans-serif;
     font-size: 16px;
     font-style: italic;
+    font-weight: 400;
     line-height: 23px;
-    color: #ee3643;
+
     box-sizing: border-box;
-    vertical-align: top;
+    color: #ee3643;
 }
 
 .contact-information {
@@ -355,19 +366,18 @@ img {
 
 .contact-information__telephone {
     position: relative;
+    padding: 9px 10px;
+    padding-left: 70px;
     
     display: inline-block;
     width: 270px;
 
     vertical-align: top;
-    text-align: center;
     font-size: 21px;
     line-height: 21px;
-    font-family: "Cuprum", "Arial", sans-serif;
+    font-family: "Cuprum", sans-serif;
     color: #e9292a;
     text-decoration: none;
-
-    padding: 9px 50px;
 
     border: 3px solid white;
     box-sizing: border-box;
@@ -863,14 +873,6 @@ img {
 .slider__toogle-2:checked ~ .slider__controls label[for="slider__toogle-2"] {
     background: #ee3643;
 }
-
-/*.slider input[type="radio"]:first-child:not(:checked) ~ .slider__prev-btn {
-    background: red;
-}
-
-.slider input[type="radio"]:last-child:not(:checked) ~ .slider__next-btn {
-    background: red;
-}*/
 
 .slider__content-slide {
     display: none;
