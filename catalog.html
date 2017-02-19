@@ -14,7 +14,8 @@
       <div class="top-header-layout container">
         <a href="index.html" class="btn btn-logo">Техномарт</a>
         <form class="search-form" action="#" method="GET" name="search">
-          <input class="search-form__input" type="text" name="search-text" placeholder="Поиск:">
+          <input class="search-form__input" type="text" name="search-text" placeholder="Поиск:" id="search-text-field">
+          <label for="search-text-field"></label>
         </form>
         <div class="order-block">
           <a class="order-block__bookmark" href="#">Закладки: 0</a>
@@ -30,7 +31,7 @@
             Интернет-магазин строительных материалов и инструментов для ремонта
           </h1>
           <div class="contact-information">
-            <a class="contact-information__telephone" href="tel:+78125550555">+7(812)555-05-55</a>
+            <a class="contact-information__telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <address class="contact-information__address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
           <div class="user-block">
@@ -272,10 +273,10 @@
       <dt>Пара слов о перфораторах</dt>
       <dd>
         Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и
-        камне.</br>
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта
-        и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный
-        молоток и ударная дрель.
+        камне.
+        <br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+        шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены
+        отбойный молоток и ударная дрель.
       </dd>
     </dl>
   </div>
@@ -297,7 +298,7 @@
       <div class="additional-footer__bottom-menu">
         <div class="contact-information">
           <address class="contact-information__address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-          <a class="contact-information__telephone" href="tel:+78125550555">+7(812)555-05-55</a>
+          <a class="contact-information__telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </div>
         <div class="product-group-list">
           <ul class="product-group-list-layout">
@@ -336,12 +337,26 @@
     </div>
   </footer>
 
-  <div class='modal_overlay'></div>
-  <div class="modal-added-product">
-    <button class="model-added-product__close" type="button" title="Закрыть">Закрыть</button>
+  <div class="hidden modal_overlay"></div>
+  <div class="hidden modal-map modal-view">
+    <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
+  </div>
+  <div class="hidden modal-write-us modal-view">
+    <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
+    <form class="write-us-form" action="#" method="POST" name="writ-us">
+      <p class="write-us__user-information">
+        <label>Ваше имя:<input type="text" name="name" placeholder="Предсавьтесь, пожалуйста"></label>
+        <label>Ваш e-mail:<input type="text" name="e-mail" placeholder="Для отправки ответа"></label>
+      </p>
+      <p class="write-us__message"><label>Текст письма:<textarea name="message" rows="6" placeholder="В свободной форме"></textarea></label></p>
+      <input class="write-us__submit btn" type="submit" value="Отправить">
+    </form>
+  </div>
+  <div class="hidden modal-added-product modal-view">
+    <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
     <p class="model-added-product__message">Товар добавлен в корзирну!</p>
     <div class="model-added-product__action-layout">
-      <a class="model-added-product__order btn" href "#">Оформить заказ</a>
+      <a class="model-added-product__order btn" href="#">Оформить заказ</a>
       <button class="model-added-product__continue btn" type="button" title="Продолжить покупки">Продолжить покупки</button>
     </div>
   </div>
