@@ -60,21 +60,15 @@
       <div class="product-group__item product-group__item-material">
         <span class="flag flag-new">новинка</span>
         <b>Материалы</b>
-        <div class="product-group__item-button">
-          <a class="product-group__item-button-text" href="#">На любой вкус</a>
-        </div>
+        <a class="product-group__item-button" href="#">На любой вкус</a>
       </div>
       <div class="product-group__item product-group__item-tool">
         <b>Инструмент</b>
-        <div class="product-group__item-button">
-          <a class="product-group__item-button-text" href="#">На все случаи</a>
-        </div>
+        <a class="product-group__item-button" href="#">На все случаи</a>
       </div>
       <div class="product-group__item product-group__item-technique">
         <b>Техника</b>
-        <div class="product-group__item-button">
-          <a class="product-group__item-button-text" href="#">Для стройки</a>
-        </div>
+        <a class="product-group__item-button" href="#">Для стройки</a>
       </div>
       <div class="slider">
         <input type="radio" class="slider__toogle-1" id="slider__toogle-1" name="toogle" checked>
@@ -95,22 +89,18 @@
           <div class="slider__content-slide">
             <b class="slider__title">Дрели</b>
             <p class="slider__description">Соседям на радость</p>
-            <img class="slider__photo" src="img/photo-gallery-drill.jpg" width="620" height="266" alt="Перфоратор">
+            <img class="slider__photo" src="img/photo-gallery-drill.jpg" width="620" height="266" alt="Дрель">
             <a class="slider__btn btn" href="#">Открыть каталоге</a>
           </div>
         </figure>
       </div>
       <div class="product-group__item product-group__item-sales">
         <b>Скикди 50%</b>
-        <div class="product-group__item-button">
-          <a class="product-group__item-button-text" href="#">на 350 товаров</a>
-        </div>
+        <a class="product-group__item-button" href="#">на 350 товаров</a>
       </div>
       <div class="product-group__item product-group__item-delivery">
         <b>Доставка</b>
-        <div class="product-group__item-button">
-          <a class="product-group__item-button-text" href="#">Бесплатно</a>
-        </div>
+        <a class="product-group__item-button" href="#">Бесплатно</a>
       </div>
     </div>
 
@@ -312,13 +302,13 @@
     </div>
   </footer>
 
-  <div class="hidden modal_overlay"></div>
-  <div class="hidden modal-map modal-view">
-    <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
+  <div class="modal_overlay"></div>
+  <div class="modal-map modal-view">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2083.3881169922674!2d30.319693661831426!3d59.94012244195592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1487599111695" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
-  <div class="hidden modal-write-us modal-view">
-    <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
-    <form class="write-us-form" action="#" method="POST" name="writ-us">
+  <div class="modal-write-us modal-view">
+    <button class="modal-write-us__close btn-close" type="button" title="Закрыть">Закрыть</button>
+    <form class="write-us-form" action="https://echo.htmlacademy.ru" method="POST" name="writ-us">
       <p class="write-us__user-information">
         <label>Ваше имя:<input type="text" name="name" placeholder="Предсавьтесь, пожалуйста"></label>
         <label>Ваш e-mail:<input type="text" name="e-mail" placeholder="Для отправки ответа"></label>
@@ -327,7 +317,7 @@
       <input class="write-us__submit btn" type="submit" value="Отправить">
     </form>
   </div>
-  <div class="hidden modal-added-product modal-view">
+  <div class="modal-added-product modal-view">
     <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
     <p class="model-added-product__message">Товар добавлен в корзирну!</p>
     <div class="model-added-product__action-layout">
@@ -335,6 +325,8 @@
       <button class="model-added-product__continue btn" type="button" title="Продолжить покупки">Продолжить покупки</button>
     </div>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

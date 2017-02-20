@@ -74,7 +74,7 @@
     </ul>
     <h1 class="catalog__title">Перфораторы</h1>
     <div class="catalog__content">
-      <form class="catalog__filter" action="#" method="post" name="filter">
+      <form class="catalog__filter" action="https://echo.htmlacademy.ru" method="post" name="filter">
         <b class="catalog__filter-title">Фильтр:</b>
         <fieldset class="catalog__filter-price">
           <legend>Цена:</legend>
@@ -338,13 +338,13 @@
     </div>
   </footer>
 
-  <div class="hidden modal_overlay"></div>
-  <div class="hidden modal-map modal-view">
-    <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
+  <div class="modal_overlay"></div>
+  <div class="modal-map modal-view">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2083.3881169922674!2d30.319693661831426!3d59.94012244195592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1487599111695" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
-  <div class="hidden modal-write-us modal-view">
-    <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
-    <form class="write-us-form" action="#" method="POST" name="writ-us">
+  <div class="modal-write-us modal-view">
+    <button class="modal-write-us__close btn-close" type="button" title="Закрыть">Закрыть</button>
+    <form class="write-us-form" action="https://echo.htmlacademy.ru" method="POST" name="writ-us">
       <p class="write-us__user-information">
         <label>Ваше имя:<input type="text" name="name" placeholder="Предсавьтесь, пожалуйста"></label>
         <label>Ваш e-mail:<input type="text" name="e-mail" placeholder="Для отправки ответа"></label>
@@ -353,7 +353,7 @@
       <input class="write-us__submit btn" type="submit" value="Отправить">
     </form>
   </div>
-  <div class="hidden modal-added-product modal-view">
+  <div class="modal-added-product modal-view">
     <button class="model-added-product__close btn-close" type="button" title="Закрыть">Закрыть</button>
     <p class="model-added-product__message">Товар добавлен в корзирну!</p>
     <div class="model-added-product__action-layout">
@@ -361,6 +361,8 @@
       <button class="model-added-product__continue btn" type="button" title="Продолжить покупки">Продолжить покупки</button>
     </div>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
