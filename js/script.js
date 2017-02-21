@@ -1,13 +1,13 @@
 var showView = function(viewClass) {
     var view = document.querySelector(viewClass);
-    if (view != undefined) {
+    if (!!view) {
         view.classList.add("show");
     }
 }
 
 var closeView = function(viewClass) {
     var view = document.querySelector(viewClass);
-    if (view != undefined) {
+    if (!!view) {
         view.classList.remove("show");
     }
 }
@@ -64,28 +64,27 @@ continueBuyButton.addEventListener("click", function(event) {
 
 // Напишите нам
 var contactsButton = document.querySelector(".contacts__btn");
-var contactUsCloseButton = document.querySelector(".modal-write-us__close ");
+var contactUsCloseButton = document.querySelector(".modal-write-us__close");
 
-contactsButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    showModalView(".modal-write-us");
-});
+if (!!contactsButton) {
+    contactsButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        showModalView(".modal-write-us");
+    });
+}
 
-contactUsCloseButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    closeModalView(".modal-write-us")
-});
+if (!!contactUsCloseButton) {
+    contactUsCloseButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        closeModalView(".modal-write-us")
+    });
+}
 
 // Карта
 var mapButton = document.querySelector(".contacts__our-location");
-var mapCloseButton = document.querySelector(".modal-map__close");
-
-mapButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    showModalView(".modal-map");
-});
-
-mapCloseButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    closeModalView(".modal-map");
-});
+if (!!mapButton) {
+    mapButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        showModalView(".modal-map");
+    });
+}
